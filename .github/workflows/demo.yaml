@@ -6,5 +6,5 @@ jobs:
     runs-on: ubuntu-latest
     container: micropython/unix:v1.19.1
     steps:
-      - name: Check for dockerenv file
+      - name: Install urequests using mip
         run: micropython-dev -m mip install urequests
