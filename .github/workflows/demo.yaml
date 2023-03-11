@@ -1,0 +1,10 @@
+name: demo
+on:
+  workflow_dispatch:
+jobs:
+  install-with-mip:
+    runs-on: ubuntu-latest
+    container: micropython/unix:v1.19.1
+    steps:
+      - name: Check for dockerenv file
+        run: micropython-dev -m mip install urequests
